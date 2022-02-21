@@ -51,7 +51,6 @@ public class LogoutStepDefs {
     public void theUserOpensANewTab() {
         dashBoardPage.openNewTab();
         BrowserUtils.waitFor(5);
-
     }
 
     @Then("The user checks all other opened tabs are logged out")
@@ -63,7 +62,6 @@ public class LogoutStepDefs {
         System.out.println("actualTitle = " + actualTitle);
         System.out.println("expectedTitle = " + expectedTitle);
         Assert.assertTrue(actualTitle.contains(expectedTitle));
-
     }
 
     @And("The user closes the current tab")
