@@ -29,16 +29,17 @@ public class LogoutStepDefs {
 
     @And("The user clicks on Profile Menu Dropdown")
     public void theUserClicksOnProfileMenuDropdown() {
-        BrowserUtils.waitFor(5);
+
         BrowserUtils.waitForPageToLoad(20);
         BrowserUtils.waitForVisibility(dashBoardPage.nameInProfileDropDown,10);
+        dashBoardPage.waitUntilLoaderScreenDisappear();
         BrowserUtils.clickWithJS(dashBoardPage.nameInProfile);
     }
 
     @And("The user clicks on Logout")
     public void theUserClicksOnLogout() {
         BrowserUtils.waitForClickablility(dashBoardPage.logOutButton, 10);
-        BrowserUtils.waitFor(5);
+        dashBoardPage.waitUntilLoaderScreenDisappear();
         dashBoardPage.logOutButton.click();
     }
 

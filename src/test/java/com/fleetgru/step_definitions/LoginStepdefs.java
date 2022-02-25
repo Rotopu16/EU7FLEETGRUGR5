@@ -94,7 +94,7 @@ public class LoginStepdefs {
 
     @Then("Remember Me Check Box is checked")
     public void rememberMeCheckBoxIsChecked() {
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(2);
         Assert.assertTrue(loginPage.rememberMeCheckBox2.isSelected());
     }
 
